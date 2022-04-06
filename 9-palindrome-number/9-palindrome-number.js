@@ -2,15 +2,15 @@
  * @param {number} x
  * @return {boolean}
  */
-var isPalindrome = function(x) {
+const isPalindrome = (x) => {
     const initialOne = x.toString().split('');
     const comparePalidrome = x.toString().split('').reverse();
-    const whatEver = [];
+    const storage = [];
     for(let i =0; i < initialOne.length; i++){
         if (initialOne[i] === (comparePalidrome[i]))
-        whatEver.push(initialOne[i])
+        storage.push(initialOne[i])
     }
-    if(whatEver.length === initialOne.length){
+    if(storage.length === initialOne.length){
         return true
     }else{
         return false
