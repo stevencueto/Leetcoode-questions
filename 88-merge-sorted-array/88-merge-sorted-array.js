@@ -6,7 +6,6 @@
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 const merge = (nums1, m, nums2, n)=> {
-    if(n === 0 && nums1.length === m -1)return nums1
     let first = m - 1;
     let second = n - 1;
     let indx = n + m - 1;
