@@ -14,11 +14,11 @@ var levelOrder = function(root) {
     if(!root) return []
     
     const queue = [root]
-    const result = []
+    const results = []
     
     while(queue.length){
         let len = queue.length
-        result.push(queue.map(one => one.val))
+        results.push(queue.map(one => one.val))
         
         while(len--){
             let node = queue.shift()
@@ -26,5 +26,5 @@ var levelOrder = function(root) {
             if(node.right) queue.push(node.right)
         }
     }
-    return result
+    return results
 };
