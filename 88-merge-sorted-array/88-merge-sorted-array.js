@@ -6,22 +6,23 @@
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 const merge = (nums1, m, nums2, n)=> {
+    if(n === 0 && nums1.length === m -1)return nums1
     let first = m - 1;
-    let second = n -1;
-    let i = n + m - 1;
+    let second = n - 1;
+    let indx = n + m - 1;
     
     while(second >= 0){
         let arr1 = nums1[first]
         let arr2 = nums2[second]
         
         if(arr1 > arr2){
-            nums1[i] = arr1
-            i--
+            nums1[indx] = arr1
+            indx--
             first--
         }else{
-            nums1[i] = arr2
-            i--
+            nums1[indx] = arr2;
+            indx--
             second--
         }
-    }  
+    }
 };
