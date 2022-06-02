@@ -4,9 +4,9 @@
  * @return {number[]}
  */
 const twoSum = (nums, target) => {
-   let memory = {}
+   let hs = {}
    for(let [index, num] of nums.entries() ){
-       if(memory[num] !== undefined) return [memory[num], index]
-       memory[target - num] = index
+       if(hs[num] !== undefined) return [hs[num], index]
+       hs[target - num] = index
    }
 };
