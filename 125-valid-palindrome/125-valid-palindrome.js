@@ -19,4 +19,5 @@ var isPalindrome = function(s) {
 create a left index variable to keep track of the left pointer
 create a right index variable to keep track of the right index
 create a while loop to se if the pointers are equal, if they are keep looping, if they are not, break out of the while loop and return false
+make sure .toLowerCase() the characters
 */
