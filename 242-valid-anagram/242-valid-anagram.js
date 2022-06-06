@@ -18,5 +18,6 @@ var isAnagram = function(s, t) {
     return true
 };
 
-//making a hash map and 2 for loops makes a spaces o(N) s and O(1) time
+//it has a constant time and space complexity
+//but it can be even more efficient, by using one hashmap
 
