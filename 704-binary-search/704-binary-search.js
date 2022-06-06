@@ -18,3 +18,7 @@ const search = (nums, target) => {
     }
     return -1
 };
+
+/*
+we're doing it by Binary Search, so we have 3 pointers left, irght and middle, and we look to se if the target is more than middle pointer we increment left else we decrement right, until we find our target or our right is equal to our left or more, then we return -1
+*/
