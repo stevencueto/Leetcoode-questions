@@ -10,3 +10,5 @@ const maxSubArray = (nums)=> {
     }
     return results
 };
+
+//make a for loop and a variable called results; results is going to return the maximun sum of the array, use a built in function called Math.max to determin whether nums[i] is larger then my result and then modify the result variable, return the result at the end of the forloop
