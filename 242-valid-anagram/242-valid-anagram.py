@@ -17,3 +17,5 @@ class Solution(object):
             if hs_s[j] != hs_t.get(j, 0):
                 return False
         return True
+    
+    ## making the hashmap to loop through the strings, then store the char frequency, after that we take in the hs's and them we loop through them and compare the key values, if they don't match we return False, if at the end they match we return True time complexity is O(n or s+t cause he va to loop thorugh it all) space complexity is O(n or s + t) casue we need two hs
