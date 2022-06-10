@@ -13,3 +13,7 @@ class Solution:
                 r = mid - 1
         
         return -1
+    
+    """
+    make 2 pointers, then use them to loop throgh the array given, start in the middle point, if the starting point is less than targert, increment l by mid + 1, else decrement r by mid - 1, if we exit the loop, return negative
+    """
