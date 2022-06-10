@@ -30,6 +30,8 @@ class Solution(object):
                 return False
         return True
         
-        
+        """
+        this one has a time complexity of O(n) because we still have to loop through the whole input, and a space complexity of O(1) because we only have to make one new hs, instead of 2 hs this is more optimal but can we improve this one?
+        """
     
     
