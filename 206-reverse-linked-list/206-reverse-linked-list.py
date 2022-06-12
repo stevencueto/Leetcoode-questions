@@ -9,6 +9,7 @@ class Solution:
         
         #recursive:
         #time complexity is O(n) m O(n):
+        # the memory is linerar because if we were given a list of size 2 the recursive call is size 2 as well
         
         if not head:
             return None
