@@ -8,10 +8,10 @@ class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         
         #iterative:
-        q = [root]
+        q = deque([root])
         
         while len(q) > 0:
-            node = q.pop()
+            node = q.popleft()
             
             if node != None:
                 tmp = node.left
