@@ -8,6 +8,7 @@ class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         
         #iterative:
+        #time complexity is O(n), space complexity is O(n) need to make a queue
         q = deque([root])
         
         while len(q) > 0:
@@ -24,6 +25,7 @@ class Solution:
         
         
         #recursion:
+        #time complexity is O(n) space complexity is O(1) no new data structures
         if not root:
             return None
         
