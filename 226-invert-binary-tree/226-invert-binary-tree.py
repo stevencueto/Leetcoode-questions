@@ -11,7 +11,7 @@ class Solution:
         #time complexity is O(n), space complexity is O(n) need to make a queue
         q = deque([root])
         
-        while len(q) > 0:
+        while len(q):
             node = q.popleft()
             
             if node != None:
@@ -26,17 +26,12 @@ class Solution:
         
         #recursion:
         #time complexity is O(n) space complexity is O(1) no new data structures
-        if not root:
-            return None
         
         if not root:
             return None
-        
-        #swap the children in the bnt
-        temp = root.left
-        root.left = root.right
-        root.right = temp
-        
+        tmr = root.left
+        root.right = root.left
+        root.left = tmr
         self.invertTree(root.left)
         self.invertTree(root.right)
         return root
