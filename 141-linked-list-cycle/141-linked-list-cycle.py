@@ -17,3 +17,6 @@ class Solution:
             if slow == fast:
                 return True
         return False
+    
+    
+    #make 2 pointers the fast one and the slow one, fast is not None, check if the meet if they do true, else continue, if exit loop retrun F, time O(n) space O(n)
