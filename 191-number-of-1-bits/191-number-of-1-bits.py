@@ -6,3 +6,5 @@ class Solution:
             ans += n % 2
             n = n >> 1
         return ans
+    
+    """this uses bit manipulation with shifting from the bit with the >> 1, we update the value of the n, we only increment n when the remainder is = 1 and we shift the bits, because is more cpu efficient, if we find n = 0, return the output"""
