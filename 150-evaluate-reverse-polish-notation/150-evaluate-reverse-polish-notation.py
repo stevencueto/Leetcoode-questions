@@ -18,3 +18,7 @@ class Solution:
                 stack.append(int(token))
         
         return stack.pop()
+    
+    #O(n), O(n)
+    
+    #make the nums2 the first pop because is the one after nums 1 in the array!
