@@ -14,13 +14,12 @@ class Solution:
         if not head:
             return None
         
-        new_n = head
+        new_head = head
         if head.next:
-            new_n = self.reverseList(head.next)
+            new_head = self.reverseList(head.next)
             head.next.next = head
         head.next = None
-            
-        return new_n
+        return new_head
         
         
         
