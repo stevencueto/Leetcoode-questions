@@ -5,9 +5,24 @@
 #         self.next = next
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        #make pointer:
+        prev, curr = None, head
         
         
-        #recursive:
+        #iterate:
+        while curr:
+            #store curr in a variable:
+            nxt = curr.next
+            curr.next = prev
+            prev = curr
+            curr = nxt
+        return prev
+            
+        #make a variable to move nodes. then return that variable through iteration, 
+        #time complexity is O(n) m O (1) only pointers no data strucktures.
+        
+        
+          #recursive:
         #time complexity is O(n) m O(n):
         # the memory is linerar because if we were given a list of size 2 the recursive call is size 2 as well
         
@@ -22,22 +37,3 @@ class Solution:
         return new_head
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        ##Iterative:
-        prv, current = None, head
-        
-        while crr:
-            nxt = current.next
-            current.next = prv
-            prv = current
-            current =  nxt 
-        return prev
-        #make a variable to move nodes. then return that variable through iteration, 
-        #time complexity is O(n) m O (1) only pointers no data strucktures.
