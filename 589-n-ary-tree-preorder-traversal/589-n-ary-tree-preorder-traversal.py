@@ -9,7 +9,23 @@ class Node:
 class Solution:
     def preorder(self, root: 'Node') -> List[int]:
         
-        ##dfs O(n) O(n)
+        if not root:
+            return []
+        
+        stack, output = [root, ], []
+        
+        while stack:
+            root = stack.pop()
+            output.append(root.val)
+            stack.extend(root.children[::-1])
+            
+        return output
+        
+        
+        
+        
+        
+        ##dfs O(n) O(n) or recursive
         output = []
         def dfs(node):
             if not node:
