@@ -14,3 +14,6 @@ class Solution:
             res = max(res, r - l + 1)
             
         return res
+    
+    
+    #make a sliding window, update pointers, keep the max frequency, if the window minus the max freq is > than k, decrement s[l] - 1, increment l to move the window, update res, return res O(n) O(1)
