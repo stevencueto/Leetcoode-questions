@@ -13,29 +13,32 @@ class Solution:
         
         
         #iterative:
+        #make a lvl variable, make an output, also make a stack or a queue
+        
+        
         
         if not root:
             return []
         
-        lvl = 0
         output = []
-        q = deque([root,])
+        
+        lvl = 0
+        q = deque([root, ])
         
         while q:
             output.append([])
-            length = len(q)
-            
-            for i in range(length):
+            #for every lvl append an empty array
+            lenght = len(q)
+            # for the length in our q, append values to output, append children to q
+            for i in range(lenght):
                 node = q.popleft()
+                #add values to level array
                 output[lvl].append(node.val)
-                
                 if node.left:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
-                
-            lvl += 1
-            
+            lvl += 1 
         return output
         #recursive O(n) O(n)
         
