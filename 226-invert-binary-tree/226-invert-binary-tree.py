@@ -9,19 +9,19 @@ class Solution:
         
         #iterative:
         #time complexity is O(n), space complexity is O(n) need to make a queue
-        q = deque([root])
+#         q = collections.deque([root])
         
-        while len(q):
-            node = q.popleft()
+#         while len(q):
+#             node = q.popleft()
             
-            if node != None:
-                tmp = node.left
-                node.left = node.right
-                node.right = tmp
+#             if node != None:
+#                 tmp = node.left
+#                 node.left = node.right
+#                 node.right = tmp
                 
-                q.append(node.left)
-                q.append(node.right)
-        return root
+#                 q.append(node.left)
+#                 q.append(node.right)
+#         return root
         
         
         #recursion:
@@ -29,7 +29,7 @@ class Solution:
         
         if not root:
             return None
-        tmr = root.left
+        tmr = root.right
         root.right = root.left
         root.left = tmr
         self.invertTree(root.left)
