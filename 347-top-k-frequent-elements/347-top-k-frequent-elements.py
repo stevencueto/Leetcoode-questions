@@ -17,3 +17,6 @@ class Solution:
                 if len(output) == k:
                     return output
                 
+                
+                """
+                t O (n), s O(n)                """
